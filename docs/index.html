@@ -1,0 +1,145 @@
+<!doctype html>
+<html style="touch-action: none;">
+    <head>
+        <title>Super Mario Bros Level 1-1 - Backbone Game Engine</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <link href="apple_touch_icon.png" rel="apple-touch-icon" />
+        <link href="https://fonts.googleapis.com/css?family=Ek+Mukta" rel="stylesheet">
+
+        <meta name="viewport" content="width=960, user-scalable=no"/>
+        <meta name="mobileoptimized" content="0" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+        <script src="https://use.fontawesome.com/da88d1f637.js"></script>
+        <script src="qtree.js" type="text/javascript"></script>
+        <script src="underscore.js" type="text/javascript"></script>
+        <script src="backbone.native.js" type="text/javascript"></script>
+        <script src="backbone.js" type="text/javascript"></script>
+
+        <script src="adjust-viewport.js" type="text/javascript"></script>
+        <script src="shapes.js" type="text/javascript"></script>
+        <script src="core.js" type="text/javascript"></script>
+        <script src="character.js" type="text/javascript"></script>
+        <script src="input.js" type="text/javascript"></script>
+        <script src="hero.js" type="text/javascript"></script>
+        <script src="world.js" type="text/javascript"></script>
+        <script src="local-storage.js" type="text/javascript"></script>
+        <script src="camera.js" type="text/javascript"></script>
+        <script src="editor.js" type="text/javascript"></script>
+
+        <script src="mario.js" type="text/javascript"></script>
+        <script src="tiles.js" type="text/javascript"></script>
+        <script src="artifacts.js" type="text/javascript"></script>
+        <script src="enemies.js" type="text/javascript"></script>
+        <script src="display.js" type="text/javascript"></script>
+        <script src="level_1-1.js" type="text/javascript"></script>
+        <script src="main.js" type="text/javascript"></script>
+
+        <style>
+            body {
+                margin: 0;
+                background-color: #282828;
+                color: white;
+                font-size: 1.2em;
+                font-family: 'Ek Mukta', sans-serif;
+            }
+
+            .content {
+                margin: 5px;
+                text-align: center;
+            }
+            h1, p, a, span {
+                margin: 3px;
+            }
+            a {
+                color: white;
+                font-size: 1em;
+            }
+            .icons, .controls {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .icons a {
+                padding: 0 5px;
+                text-decoration: none;
+            }
+            .icons a:hover, icons a:focus {
+                color: dodgerblue;
+            }
+            .game {
+                display: block;
+                width: 100vh;
+                height: 70vh;
+                margin: auto;
+            }
+            canvas {
+                width: 96vh;
+                height: 70vh;
+                display: block;
+                margin: auto;
+            }
+            @media screen and (max-device-width: 800px){
+                body {
+                    font-size: 2.2em;
+                }
+                .game {
+                    width: 100vw;
+                    height: 70vw;
+                }
+                canvas {
+                    width: 96vw;
+                    height: 70vw;
+                }
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <img id="mario" src="super-mario-2x.png" style="display:none;" />
+        <img id="tiles" src="super-mario-tiles-2x.png" style="display:none;" />
+        <img id="enemies" src="super-mario-enemies-2x.png" style="display:none;" />
+        <img id="icons" src="icons.png" style="display:none;" />
+
+        <div class="content">
+            <h1>yep, it's Patrick.</h1>
+            <p>here's where else you can find me...</p>
+            <div class="icons">
+                <a href="http://github.com/priley86">
+                    <i class="fa fa-github-alt" aria-hidden="true"></i>
+                    Github
+                </a>
+                <a href="https://www.linkedin.com/in/patmriley">
+                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                    Linked In
+                </a>
+                <a href="https://medium.com/@priley86">
+                    <i class="fa fa-medium" aria-hidden="true"></i>
+                    Medium
+                </a>
+                <a href="mailto:patrick@patrickmriley.net?Subject=Hey%20there" target="_top">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    Email
+                </a>
+            </div>
+        </div>
+        <div id="game" class="game">
+            <canvas id="foreground"  width="960" height="700">
+                Your browser does not support canvas element.
+            </canvas>
+        </div>
+        <div class="content controls">
+            <span><i class="fa fa-arrow-left" aria-hidden="true"></i> : Keyboard Left </span>
+            <span><i class="fa fa-arrow-right" aria-hidden="true"></i> : Keyboard Right </span>
+            <span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> A : Z </span>
+            <span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> B : X </span>
+        </div>
+
+    </body>
+
+</html>
